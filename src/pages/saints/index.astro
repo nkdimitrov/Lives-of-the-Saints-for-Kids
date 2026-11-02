@@ -1,0 +1,37 @@
+---
+import Base from '../../layouts/Base.astro';
+import Medallion from '../../components/Medallion.astro';
+import { allSaints, formatDate } from '../../lib/calendar.js';
+import { loadSaints } from '../../lib/content.js';
+import { saintUrl } from '../../lib/url.js';
+import { t } from '../../lib/i18n.js';
+
+const cal = allSaints();
+const saints = loadSaints();
+const featured = [...saints.values()].filter((s) => s.complete).sort((a, b) => a.name.localeCompare(b.name));
+const rest = [...cal.values()].filter((s) => !saints.get(s.slug)?.complete).sort((a, b) => a.name.localeCompare(b.name));
+const groups = {};
+for (const s of rest) (groups[s.name[0].toUpperCase()] ||= []).push(s);
+---
+<Base title={t('saints.title')} active="saints">
+  <h1>{t('saints.title')}</h1>
+  <h2>{t('saints.illustrated')}</h2>
+  <div class="saint-grid">
+    {featured.map((s) => (
+      <a class="saint-card frame" href={saintUrl(s.slug)}>
+        <Medallion src={s.portraitSrc} alt="" />
+        <h3>{s.name}</h3>
+        <p>{s.feastLabel}</p>
+      </a>
+    ))}
+  </div>
+  <h2>{t('saints.all')}</h2>
+  {Object.entries(groups).map(([letter, list]) => (
+    <>
+      <div class="az-letter">{letter}</div>
+      <ul class="az">
+        {list.map((s) => <li><a href={saintUrl(s.slug)}>{s.name}</a>{s.subtitle && <span class="d"> — {s.subtitle}</span>} <span class="d">· {s.dates.filter((d) => !d.transferredTo).map((d) => formatDate(d.date)).join(', ')}</span></li>)}
+      </ul>
+    </>
+  ))}
+</Base>

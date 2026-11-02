@@ -1,0 +1,50 @@
+---
+import Medallion from './Medallion.astro';
+import FastIcon from './FastIcon.astro';
+import { medallionFor } from '../lib/medallion.js';
+import { saintUrl } from '../lib/url.js';
+import { t } from '../lib/i18n.js';
+import { formatDate } from '../lib/calendar.js';
+
+const { day, saints } = Astro.props;
+const id = `d-${day.date}`;
+const rankLabel = { great: t('rank.great'), major: t('rank.major'), pascha: t('rank.pascha') };
+---
+<dialog class="day-dialog" id={id} aria-labelledby={`${id}-title`}>
+  <div class="dd-head">
+    <h2 id={`${id}-title`}>{formatDate(day.date, { weekday: true })}</h2>
+    <p>{t('day.saints')}</p>
+    <button class="dd-close" type="button" data-close aria-label={t('day.close')}>×</button>
+  </div>
+  <div class="dd-body">
+    {day.fast !== 'none' && (
+      <div class="dd-fast"><FastIcon fast={day.fast} label={day.fastLabel} /><span><strong>{t('fast.title')}:</strong> {day.fastLabel}</span></div>
+    )}
+    <ul class="dd-list">
+      {day.commemorations.map((c) => {
+        const m = medallionFor(c, saints);
+        const s = c.slug ? saints.get(c.slug) : null;
+        const name = s?.name && s.complete && !c.movable ? s.name : c.name;
+        const body = (
+          <>
+            <Medallion src={m.src} kind={m.kind} alt="" />
+            <span>
+              <span class="dd-name">{name}</span>
+              {c.subtitle && <span class="dd-sub"> — {c.subtitle}</span>}
+              {c.note && <div class="dd-note">{c.note}</div>}
+              <div>
+                {rankLabel[c.rank] && <span class="dd-tag great">{rankLabel[c.rank]}</span>}
+                {c.slug && (s?.complete ? <span class="dd-tag read">{t('day.illustrated')} →</span> : <span class="dd-tag soon">{t('day.soon')}</span>)}
+              </div>
+            </span>
+          </>
+        );
+        return (
+          <li class="dd-item">
+            {c.slug ? <a class="dd-link" href={saintUrl(c.slug)}>{body}</a> : body}
+          </li>
+        );
+      })}
+    </ul>
+  </div>
+</dialog>

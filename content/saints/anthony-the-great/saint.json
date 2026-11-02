@@ -1,0 +1,18 @@
+{
+  "slug": "anthony-the-great",
+  "feasts": [{ "date": "01-17", "kind": "repose" }],
+  "lived": "c. 251 – 356",
+  "place": "Egypt: the village of Koma, the desert fort of Pispir and the Inner Mountain near the Red Sea",
+  "categories": ["monastic", "desert-father"],
+  "portrait": "portrait.svg",
+  "scenes": [
+    { "id": "gospel", "image": "scene-gospel.svg" },
+    { "id": "fortress", "image": "scene-fortress.svg" },
+    { "id": "raven", "image": "scene-raven.svg" }
+  ],
+  "source": {
+    "tradition": "dimitri-of-rostov",
+    "reference": "St Dimitri of Rostov, Lives of the Saints, January 17 (after the Life by St Athanasius the Great), with the Life of St Paul of Thebes, January 15",
+    "status": "draft-retelling"
+  }
+}

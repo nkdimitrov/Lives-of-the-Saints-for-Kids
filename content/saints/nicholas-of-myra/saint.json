@@ -1,0 +1,21 @@
+{
+  "slug": "nicholas-of-myra",
+  "feasts": [
+    { "date": "12-06", "kind": "repose" },
+    { "date": "05-09", "kind": "translation of relics to Bari (1087)" }
+  ],
+  "lived": "c. 270 – c. 345",
+  "place": "Patara and Myra in Lycia (today southern Turkey)",
+  "categories": ["hierarch", "wonderworker"],
+  "portrait": "portrait.svg",
+  "scenes": [
+    { "id": "gold", "image": "scene-gold.svg" },
+    { "id": "storm", "image": "scene-storm.svg" },
+    { "id": "three-men", "image": "scene-three-men.svg" }
+  ],
+  "source": {
+    "tradition": "dimitri-of-rostov",
+    "reference": "St Dimitri of Rostov, Lives of the Saints (Chet'i-Minei), December 6",
+    "status": "draft-retelling"
+  }
+}

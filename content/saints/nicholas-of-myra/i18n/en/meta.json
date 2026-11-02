@@ -1,0 +1,21 @@
+{
+  "name": "St Nicholas the Wonderworker",
+  "title": "Archbishop of Myra in Lycia",
+  "feastLabel": "December 6 · May 9",
+  "summary": "The kind bishop who secretly gave gold to the poor, calmed storms at sea, and rescued the innocent — loved by children everywhere.",
+  "sourceNote": "The text for older readers follows the order and content of the Life of St Nicholas in St Dimitri of Rostov's <em>Lives of the Saints</em> (December 6), retold in our own English words. The versions for younger readers are simplified retellings. Draft — awaiting review.",
+  "scenes": {
+    "gold": {
+      "caption": "At night Nicholas secretly drops a bag of gold through the poor man's window.",
+      "alt": "A moonlit town at night. Young Nicholas, in a dark cloak with a golden halo, tosses a bag of gold through the lit window of a small house while three sisters sleep inside and a cat watches from the roof."
+    },
+    "storm": {
+      "caption": "On the stormy sea, Nicholas prays and the wind and waves grow calm.",
+      "alt": "A wooden ship with a red-striped sail tossed on huge waves under dark clouds and lightning. Nicholas stands on the deck praying, and golden light breaks through the clouds as frightened sailors hold the ropes."
+    },
+    "three-men": {
+      "caption": "Nicholas grabs the executioner's sword and saves three innocent men.",
+      "alt": "A town square below a fortress. Bishop Nicholas in red vestments holds back the sword of an executioner while three kneeling men look up in hope. Soldiers, townspeople and three Roman generals watch."
+    }
+  }
+}

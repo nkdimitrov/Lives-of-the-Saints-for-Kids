@@ -1,0 +1,18 @@
+{
+  "slug": "catherine-of-alexandria",
+  "feasts": [{ "date": "11-25", "kind": "martyrdom (November 24 in the Slavic tradition)" }],
+  "lived": "c. 287 – c. 305",
+  "place": "Alexandria in Egypt; her relics rest at Mount Sinai",
+  "categories": ["great-martyr", "virgin-martyr", "teacher"],
+  "portrait": "portrait.svg",
+  "scenes": [
+    { "id": "ring", "image": "scene-ring.svg" },
+    { "id": "philosophers", "image": "scene-philosophers.svg" },
+    { "id": "wheel", "image": "scene-wheel.svg" }
+  ],
+  "source": {
+    "tradition": "dimitri-of-rostov",
+    "reference": "St Dimitri of Rostov, Lives of the Saints, November 24",
+    "status": "draft-retelling"
+  }
+}

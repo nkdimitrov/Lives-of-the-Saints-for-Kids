@@ -1,0 +1,21 @@
+{
+  "slug": "constantine-and-helen",
+  "feasts": [
+    { "date": "05-21", "kind": "feast of both saints" },
+    { "date": "09-14", "kind": "Elevation of the Precious Cross, found by St Helen" }
+  ],
+  "lived": "Helen c. 248 – c. 329; Constantine c. 272 – 337",
+  "place": "Naissus, York, Rome, Jerusalem and Constantinople",
+  "categories": ["equal-to-the-apostles", "rulers"],
+  "portrait": "portrait.svg",
+  "scenes": [
+    { "id": "vision", "image": "scene-vision.svg" },
+    { "id": "cross", "image": "scene-cross.svg" },
+    { "id": "city", "image": "scene-city.svg" }
+  ],
+  "source": {
+    "tradition": "dimitri-of-rostov",
+    "reference": "St Dimitri of Rostov, Lives of the Saints, May 21, with the account of the Finding of the Cross (September 14)",
+    "status": "draft-retelling"
+  }
+}

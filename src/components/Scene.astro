@@ -1,0 +1,10 @@
+---
+// An illustrated scene placed inside the story, with its caption on a scroll.
+const { scene } = Astro.props;
+---
+{scene && (
+  <figure class="scene">
+    <div class="scene-art"><img src={scene.src} alt={scene.alt} loading="lazy" decoding="async" width="1200" height="800" /></div>
+    <figcaption>{scene.caption}</figcaption>
+  </figure>
+)}

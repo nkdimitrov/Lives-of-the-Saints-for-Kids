@@ -1,0 +1,21 @@
+{
+  "name": "St Sergius of Radonezh",
+  "title": "Abbot and Wonderworker of All Russia",
+  "feastLabel": "September 25 · July 5",
+  "summary": "A boy who couldn't learn to read until a mysterious elder blessed him; a hermit who shared his bread with a bear; the humble abbot who blessed his people before their great battle.",
+  "sourceNote": "The text for older readers follows St Dimitri of Rostov's <em>Lives of the Saints</em> (September 25), which is based on the Life by St Sergius's disciple, St Epiphanius the Wise. Retold in our own English words. Draft — awaiting review.",
+  "scenes": {
+    "oak": {
+      "caption": "Searching for lost horses, young Bartholomew meets a holy elder praying under an oak tree.",
+      "alt": "A wide Russian meadow at the edge of a birch forest. Under a great oak, a mysterious old monk in a black schema with a golden halo hands a piece of blessed bread to the boy Bartholomew, who wears a blue shirt with a red sash. Horses graze nearby, a stream winds past, and a wooden village with an onion-domed church stands on the hill."
+    },
+    "bear": {
+      "caption": "Alone in the forest, Sergius shares his bread with a hungry bear.",
+      "alt": "A small wooden church with a silver onion dome and a log cell in a clearing of a deep forest of firs and birches. Monk Sergius in a dark robe holds out a piece of bread to a big brown bear, while squirrels, a hedgehog, a woodpecker and a deer watch from the trees."
+    },
+    "blessing": {
+      "caption": "St Sergius blesses Prince Dmitry before the great battle and sends two monks with him.",
+      "alt": "In front of the white walls and blue domes of the Holy Trinity Monastery, old Abbot Sergius in his schema makes the sign of the cross over Prince Dmitry, who kneels in shining armor and a red cloak. Two tall monks with shields stand ready, and behind them a long line of horsemen with banners waits on the road among birch trees."
+    }
+  }
+}

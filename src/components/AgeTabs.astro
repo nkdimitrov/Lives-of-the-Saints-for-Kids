@@ -1,0 +1,69 @@
+---
+import AgeIcon from './AgeIcon.astro';
+import Scene from './Scene.astro';
+import { AGE_TIERS, DEFAULT_TIER } from '../lib/content.js';
+import { t } from '../lib/i18n.js';
+
+const { saint } = Astro.props;
+const labels = { under6: ['age.under6', 'age.under6.sub'], '6to12': ['age.6to12', 'age.6to12.sub'], '12plus': ['age.12plus', 'age.12plus.sub'] };
+const minutes = (words) => Math.max(1, Math.round(words / 160));
+---
+<section class="age-picker" aria-label={t('age.label')}>
+  <h2>{t('age.label')}</h2>
+  <div class="age-tabs" role="tablist">
+    {AGE_TIERS.map((tier) => (
+      <button type="button" class="age-tab" role="tab" id={`tab-${tier.id}`} data-tier={tier.id} aria-controls={`panel-${tier.id}`} aria-selected={tier.id === DEFAULT_TIER ? 'true' : 'false'} tabindex={tier.id === DEFAULT_TIER ? 0 : -1}>
+        <AgeIcon kind={tier.icon} />
+        <span class="t1">{t(labels[tier.id][0])}</span>
+        <span class="t2">{t(labels[tier.id][1])}</span>
+      </button>
+    ))}
+  </div>
+</section>
+
+{AGE_TIERS.map((tier) => {
+  const v = saint.versions[tier.id];
+  if (!v) return null;
+  let first = true;
+  return (
+    <article class={`story frame tier-${tier.id}`} id={`panel-${tier.id}`} role="tabpanel" aria-labelledby={`tab-${tier.id}`} data-panel={tier.id} hidden={tier.id !== DEFAULT_TIER}>
+      <p class="meta">{t(labels[tier.id][0])} · {t(labels[tier.id][1])} · about {minutes(v.words)} min read</p>
+      {v.blocks.map((b) => {
+        if (b.type === 'scene') return <Scene scene={saint.scenes[b.id]} />;
+        const cls = first ? 'prose prose-lead' : 'prose';
+        first = false;
+        return <div class={cls} set:html={b.html} />;
+      })}
+    </article>
+  );
+})}
+
+<noscript><style>.story[hidden]{display:block}</style></noscript>
+
+<script>
+  const KEY = 'lotsk-age-tier';
+  const tabs = Array.from(document.querySelectorAll<HTMLButtonElement>('.age-tab'));
+  const panels = Array.from(document.querySelectorAll<HTMLElement>('[data-panel]'));
+  function select(tier: string, focus = false) {
+    if (!tabs.some((t) => t.dataset.tier === tier)) return;
+    tabs.forEach((t) => {
+      const on = t.dataset.tier === tier;
+      t.setAttribute('aria-selected', String(on));
+      t.tabIndex = on ? 0 : -1;
+      if (on && focus) t.focus();
+    });
+    panels.forEach((p) => (p.hidden = p.dataset.panel !== tier));
+    try { localStorage.setItem(KEY, tier); } catch {}
+  }
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => select(t.dataset.tier!));
+    t.addEventListener('keydown', (e) => {
+      const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (d) { e.preventDefault(); select(tabs[(i + d + tabs.length) % tabs.length].dataset.tier!, true); }
+    });
+  });
+  const fromUrl = new URLSearchParams(location.search).get('age');
+  let saved: string | null = null;
+  try { saved = localStorage.getItem(KEY); } catch {}
+  if (fromUrl || saved) select((fromUrl || saved)!);
+</script>

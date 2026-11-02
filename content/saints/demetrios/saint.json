@@ -1,0 +1,18 @@
+{
+  "slug": "demetrios",
+  "feasts": [{ "date": "10-26", "kind": "martyrdom" }],
+  "lived": "c. 270 – 306",
+  "place": "Thessaloniki",
+  "categories": ["great-martyr", "myrrh-streamer", "protector-of-thessaloniki"],
+  "portrait": "portrait.svg",
+  "scenes": [
+    { "id": "teaching", "image": "scene-teaching.svg" },
+    { "id": "nestor", "image": "scene-nestor.svg" },
+    { "id": "protector", "image": "scene-protector.svg" }
+  ],
+  "source": {
+    "tradition": "dimitri-of-rostov",
+    "reference": "St Dimitri of Rostov, Lives of the Saints, October 26",
+    "status": "draft-retelling"
+  }
+}

@@ -1,0 +1,31 @@
+---
+import Base from '../layouts/Base.astro';
+import { t } from '../lib/i18n.js';
+import { u } from '../lib/url.js';
+---
+<Base title={t('about.title')} active="about">
+  <article class="prose-page frame">
+    <h1>{t('about.title')}</h1>
+    <p><strong>Lives of the Saints for Kids</strong> is an illustrated Orthodox Christian calendar for the year 2027. Each day shows the saints and feasts the Church remembers; tap a day to see them all, then tap a saint to read their life.</p>
+
+    <h2>Three ways to read every life</h2>
+    <ul>
+      <li><strong>Little Ones (under 6)</strong> — a few short sentences to read aloud, focused on one or two shining moments and a simple lesson.</li>
+      <li><strong>Young Readers (6–12)</strong> — a storybook retelling with the main events, gently simplified where the original is hard or frightening.</li>
+      <li><strong>Older Readers (12+)</strong> — the full traditional account, following the order and content of St Dimitri of Rostov's <em>Lives of the Saints</em> (the <em>Chet'i-Minei</em>), retold in our own English words.</li>
+    </ul>
+    <p>The pictures are the same for every age. They show the best-known moments of each life and are drawn with lots of detail — forests, animals, villages, fortresses and palaces — for curious ten-year-old eyes.</p>
+
+    <h2>The calendar</h2>
+    <p>The calendar follows the <strong>New (Revised Julian) Calendar</strong>, as used by the Greek Orthodox Archdiocese of America. Pascha in 2027 is on <strong>May 2</strong>. Feasts that move with Pascha (Great Lent, Holy Week, Ascension, Pentecost and the Sundays around them) are calculated automatically, and St George's feast, which falls during Lent this year, is kept on Bright Monday.</p>
+    <p>The fasting symbols are a guide for families and follow common Greek Orthodox practice. Every family should follow the guidance of their own parish priest.</p>
+
+    <h2>Sources</h2>
+    <p>The daily lists of saints follow the standard Synaxarion of the Orthodox Church; see the <a href="https://www.goarch.org/chapel/calendar">Greek Orthodox Archdiocese calendar</a> for the official listings. The lives for older readers follow St Dimitri of Rostov (1651–1709). For saints who lived after his time, they follow the standard Orthodox hagiography, and each page says which source it uses.</p>
+    <p>These texts are retellings for children and families. They have not yet been reviewed by clergy. If you find a mistake, please let us know.</p>
+
+    <h2>Who was St Dimitri of Rostov?</h2>
+    <p>St Dimitri (Daniel Tuptalo) was a monk, preacher and later Metropolitan of Rostov. For twenty years he gathered the lives of the saints from Greek, Latin and Slavonic books and wrote them down in twelve great volumes, one for each month. Orthodox families have read his <em>Lives</em> aloud for more than three hundred years. We remember him on September 21 and October 28.</p>
+    <p><a class="btn" href={u('/saints/')}>Meet the saints →</a></p>
+  </article>
+</Base>

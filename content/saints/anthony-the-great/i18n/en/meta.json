@@ -1,0 +1,21 @@
+{
+  "name": "St Anthony the Great",
+  "title": "Father of Monks",
+  "feastLabel": "January 17",
+  "summary": "A young Egyptian who heard one Gospel verse, gave everything away, and went into the desert to pray — and the desert filled with monks.",
+  "sourceNote": "The text for older readers follows St Dimitri of Rostov's <em>Lives of the Saints</em> (January 17), which is based on the Life of St Anthony written by his friend St Athanasius the Great, together with the meeting with St Paul of Thebes (January 15). Retold in our own English words. Draft — awaiting review.",
+  "scenes": {
+    "gospel": {
+      "caption": "Hearing the Gospel, young Anthony gives everything he owns to the poor.",
+      "alt": "A village by the river Nile with palm trees, mud-brick houses and a little church. Young Anthony hands baskets of bread, clothes and coins to grateful villagers, while his sister waves goodbye, a boat with a triangular sail passes on the river and an ibis wades among the reeds."
+    },
+    "fortress": {
+      "caption": "When the demons come like wild beasts, Christ's light shines into the old fort and they vanish.",
+      "alt": "An old ruined desert fort at night. Inside, Anthony kneels in prayer as a beam of golden light shines down from heaven, and dark shadowy shapes of a lion, a bear, a wolf and a snake melt away into the corners."
+    },
+    "raven": {
+      "caption": "A raven brings bread to Anthony and St Paul of Thebes, the first hermit.",
+      "alt": "Outside a cave in the rocky desert by a spring and a tall palm tree, two old hermits with long white beards sit together. A black raven flies down holding a whole round loaf of bread, while two lions rest nearby and lizards sun themselves on the rocks."
+    }
+  }
+}

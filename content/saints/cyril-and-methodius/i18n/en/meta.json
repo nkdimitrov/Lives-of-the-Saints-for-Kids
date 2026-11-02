@@ -1,0 +1,21 @@
+{
+  "name": "Sts Cyril and Methodius",
+  "title": "Equal-to-the-Apostles, Teachers of the Slavs",
+  "feastLabel": "May 11",
+  "summary": "Two brothers from Thessaloniki who created an alphabet for the Slavic peoples and gave them the Gospel and the church services in their own language.",
+  "sourceNote": "The text for older readers follows St Dimitri of Rostov's <em>Lives of the Saints</em> (May 11, with February 14 and April 6), which draws on the ancient Slavonic Lives of Constantine and Methodius. Retold in our own English words. Draft — awaiting review.",
+  "scenes": {
+    "alphabet": {
+      "caption": "After forty days of prayer, Constantine writes the first Slavonic letters, and the first words: \"In the beginning was the Word.\"",
+      "alt": "A monastery scriptorium with arched windows, shelves of books and a lamp. Young Constantine with a short dark beard sits at a desk writing glowing Glagolitic letters on parchment, while his older brother Methodius, bearded, holds the Gospel book open. Disciples grind ink and sharpen quills, and new letters seem to float in the golden light."
+    },
+    "moravia": {
+      "caption": "In Moravia the people hear the Gospel in their own language for the first time.",
+      "alt": "A green Moravian valley with a wooden church, thatched cottages and a big linden tree. Under the tree Methodius reads from a Slavonic book while Constantine teaches children the new letters on a wax tablet. Villagers in embroidered clothes listen with joy, and Prince Rastislav watches on horseback."
+    },
+    "rome": {
+      "caption": "In Rome the Pope lays the Slavonic books on the altar and blesses them.",
+      "alt": "Inside a great Roman basilica with marble columns, golden mosaics and candles, the Pope in white vestments places the Slavonic Gospel book on the altar. Cyril and Methodius kneel nearby, the relics of St Clement are carried in a golden casket, and clergy and people look on."
+    }
+  }
+}

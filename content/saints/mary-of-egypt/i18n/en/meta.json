@@ -1,0 +1,21 @@
+{
+  "name": "St Mary of Egypt",
+  "title": "Model of Repentance",
+  "feastLabel": "April 1 · Fifth Sunday of Lent",
+  "summary": "A young woman who had turned far away from God came home to Him through the prayers of the Mother of God, and lived for 47 years in the desert in prayer and repentance.",
+  "sourceNote": "The text for older readers follows St Dimitri of Rostov's <em>Lives of the Saints</em> (April 1), which is based on the Life written by St Sophronius, Patriarch of Jerusalem. Retold in our own English words; the account of her early life is told with discretion. Draft — awaiting review.",
+  "scenes": {
+    "icon": {
+      "caption": "Unable to enter the church, Mary weeps and prays before the icon of the Mother of God.",
+      "alt": "The courtyard of the Church of the Holy Resurrection in Jerusalem, crowded with pilgrims carrying candles. Mary, in a bright red dress with a veil slipping from her hair, stands by the doorway with tears, looking up at an icon of the Theotokos with a lamp, while pilgrims stream past her through the open doors."
+    },
+    "jordan": {
+      "caption": "Making the sign of the Cross, Mary walks across the Jordan to receive Holy Communion from Abba Zosimas.",
+      "alt": "The river Jordan at evening with reeds, palm trees and distant hills. Old, thin Mary, wrapped in the monk Zosimas's brown cloak and shining with a golden halo, walks on the water across the river, while Zosimas waits on the bank holding a golden chalice in amazement."
+    },
+    "lion": {
+      "caption": "A lion comes out of the desert to help Abba Zosimas dig Mary's grave.",
+      "alt": "A quiet desert valley at sunrise. A big gentle lion digs in the sand with its paws while old Zosimas stands praying beside a fresh mound marked with a small wooden cross and wildflowers. Desert hills, a palm tree and a few birds are in the background."
+    }
+  }
+}

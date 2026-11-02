@@ -1,0 +1,105 @@
+---
+import Base from '../layouts/Base.astro';
+import Medallion from '../components/Medallion.astro';
+import { YEAR, buildYear, MONTH_NAMES } from '../lib/calendar.js';
+import { loadSaints } from '../lib/content.js';
+import { medallionFor, principalOf } from '../lib/medallion.js';
+import { monthUrl, saintUrl, u } from '../lib/url.js';
+import { t } from '../lib/i18n.js';
+
+const { days } = buildYear();
+const saints = loadSaints();
+const featured = [...saints.values()].filter((s) => s.complete).sort((a, b) => (a.feasts?.[0]?.date || '').localeCompare(b.feasts?.[0]?.date || ''));
+
+// Compact per-day data for the "Today in the Church" card (filled in by the script below).
+const todayData = Object.fromEntries(days.map((d) => {
+  const p = principalOf(d, saints);
+  const m = medallionFor(p, saints);
+  const s = p.slug ? saints.get(p.slug) : null;
+  return [d.date.slice(5), {
+    d: d.date, w: d.weekdayName,
+    n: d.commemorations.slice(0, 4).map((c) => { const cs = c.slug ? saints.get(c.slug) : null; return [cs?.complete && !c.movable ? cs.name : c.name, c.slug ? saintUrl(c.slug) : null]; }),
+    img: m.src, f: d.fastLabel, href: `${monthUrl(d.month)}#${d.date}`,
+  }];
+}));
+const first = todayData['01-01'];
+const monthHighlights = MONTH_NAMES.map((_, i) => {
+  const md = days.filter((d) => d.month === i + 1);
+  const big = md.filter((d) => d.rank === 'great' || d.rank === 'pascha').map((d) => principalOf(d, saints).name.split(' — ')[0]);
+  return big.slice(0, 2).join(' · ') || md.filter((d) => d.rank === 'major').map((d) => principalOf(d, saints).name.split(' — ')[0]).slice(0, 2).join(' · ');
+});
+---
+<Base active="home">
+  <section class="hero">
+    <img src={u('/art/hero.svg')} alt="An illustrated Orthodox countryside with a monastery, a fortress, a palace, a village, forests, rivers and animals" width="1600" height="700" />
+    <div class="hero-card frame">
+      <h1>{t('siteTitle')}</h1>
+      <p>{t('siteTagline')} — saints, feasts and stories for every day of the year.</p>
+    </div>
+  </section>
+
+  <section class="today frame" id="today" aria-live="polite">
+    <span id="today-medallion"><Medallion src={first.img} kind="saint" alt="" /></span>
+    <div>
+      <h2 id="today-label">{t('home.todayFallback')}</h2>
+      <div class="today-date" id="today-date">{first.w}, January 1, {YEAR}</div>
+      <ul id="today-list">{first.n.map(([n, href]) => <li>{href ? <a href={href}>{n}</a> : n}</li>)}</ul>
+      <p style="margin:8px 0 0"><a class="btn" id="today-link" href={first.href}>Open this day →</a></p>
+    </div>
+  </section>
+
+  <h2>{t('home.featured')}</h2>
+  <p>{t('home.featuredIntro')}</p>
+  <div class="saint-grid">
+    {featured.map((s) => (
+      <a class="saint-card frame" href={saintUrl(s.slug)}>
+        <Medallion src={s.portraitSrc} alt="" />
+        <h3>{s.name}</h3>
+        <p>{s.feastLabel}</p>
+      </a>
+    ))}
+  </div>
+
+  <h2>{t('home.months')}</h2>
+  <div class="month-grid">
+    {MONTH_NAMES.map((m, i) => (
+      <a class="month-card frame" href={monthUrl(i + 1)}>
+        <img src={u(`/art/months/${String(i + 1).padStart(2, '0')}.svg`)} alt="" loading="lazy" width="1600" height="500" />
+        <div class="mc-body"><h3>{m}</h3><p>{monthHighlights[i]}</p></div>
+      </a>
+    ))}
+  </div>
+
+  <h2>{t('home.howTitle')}</h2>
+  <ol class="how">
+    <li class="frame">{t('home.how1')}</li>
+    <li class="frame">{t('home.how2')}</li>
+    <li class="frame">{t('home.how3')}</li>
+  </ol>
+
+  <template id="generic-medallion"><Medallion kind="saint" alt="" /></template>
+  <script type="application/json" id="today-data" set:html={JSON.stringify(todayData)} />
+  <script>
+    const data = JSON.parse(document.getElementById('today-data')!.textContent!);
+    const now = new Date();
+    const key = `${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+    const d = data[key] || data['02-28'];
+    if (d) {
+      const [y, m, day] = d.d.split('-').map(Number);
+      const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+      const isThisYear = now.getFullYear() === y;
+      document.getElementById('today-label')!.textContent = isThisYear ? 'Today in the Church' : 'On this day in 2027';
+      document.getElementById('today-date')!.textContent = `${d.w}, ${months[m - 1]} ${day}, ${y}`;
+      const list = document.getElementById('today-list')!;
+      list.replaceChildren(...d.n.map(([n, href]: [string, string | null]) => {
+        const li = document.createElement('li');
+        if (href) { const a = document.createElement('a'); a.href = href; a.textContent = n; li.append(a); } else li.textContent = n;
+        return li;
+      }));
+      (document.getElementById('today-link') as HTMLAnchorElement).href = d.href;
+      const med = document.querySelector('#today-medallion .medallion');
+      if (med && d.img) med.innerHTML = `<img src="${d.img}" alt="">`;
+      else if (med) med.replaceWith((document.getElementById('generic-medallion') as HTMLTemplateElement).content.cloneNode(true));
+    }
+  </script>
+</Base>

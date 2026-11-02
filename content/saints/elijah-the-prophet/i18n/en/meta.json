@@ -1,0 +1,21 @@
+{
+  "name": "The Holy Prophet Elijah",
+  "title": "the Tishbite, Zealot for the Lord",
+  "feastLabel": "July 20",
+  "summary": "The fiery prophet who was fed by ravens, called down fire from heaven on Mount Carmel, heard God in a gentle breeze, and was carried to heaven in a chariot of fire.",
+  "sourceNote": "The text for older readers follows the Life of the Prophet Elijah in St Dimitri of Rostov's <em>Lives of the Saints</em> (July 20), which retells the account of the Holy Scriptures (1 Kings 17–19, 2 Kings 1–2) together with Church tradition. Retold in our own English words. Draft — awaiting review.",
+  "scenes": {
+    "ravens": {
+      "caption": "By the brook Cherith, God sends ravens to bring Elijah bread and meat every morning and evening.",
+      "alt": "A rocky ravine with a trickling brook, ferns and a twisted tree. The prophet Elijah, with wild white hair and a long beard, wearing a red tunic and a rough sheepskin mantle, sits on a rock while two black ravens fly down carrying bread and meat. A fox and a hare peek from behind the rocks."
+    },
+    "carmel": {
+      "caption": "On Mount Carmel, Elijah prays and fire falls from heaven onto the altar.",
+      "alt": "The top of Mount Carmel above the sea. Elijah stands with his arms raised before a stone altar soaked with water, as a great pillar of fire falls from the opened heavens and burns up the sacrifice. King Ahab in his chariot and crowds of astonished Israelites fall to their knees, while the prophets of Baal by their own altar stare in shock."
+    },
+    "chariot": {
+      "caption": "A chariot of fire with horses of fire carries Elijah up to heaven, and Elisha catches his mantle.",
+      "alt": "Beyond the river Jordan, a chariot of flames pulled by blazing horses rises into the sky in a whirlwind of golden light, carrying Elijah upward. His mantle floats down toward young Elisha, who reaches up for it on the riverbank, with palm trees and hills around."
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Sts Constantine and Helen",
+  "title": "Equal-to-the-Apostles, Emperor and Empress",
+  "feastLabel": "May 21",
+  "summary": "The emperor who saw the sign of the Cross in the sky and set Christians free, and his mother who found the Cross of Christ in Jerusalem.",
+  "sourceNote": "The text for older readers follows the Life of Sts Constantine and Helen in St Dimitri of Rostov's <em>Lives of the Saints</em> (May 21), together with the account of the Finding of the Precious Cross, retold in our own English words. Where ancient sources differ (for example on the place of Constantine's baptism), both are mentioned. Draft — awaiting review.",
+  "scenes": {
+    "vision": {
+      "caption": "At noon, Constantine and his whole army see a shining Cross in the sky: \"By this sign, conquer!\"",
+      "alt": "A Roman army camp on a hillside with tents, banners and horses. In the bright noon sky shines a great cross of light with the Greek words EN TOUTO NIKA. Constantine on a white horse points up in wonder, while soldiers with red shields and spears look up and shade their eyes. The city of Rome and the Tiber river lie in the distance."
+    },
+    "cross": {
+      "caption": "In Jerusalem St Helen finds the Cross of Christ, and a sick woman is healed when it touches her.",
+      "alt": "A digging site on the hill of Golgotha in Jerusalem, with workers holding shovels and baskets beside three wooden crosses lifted out of the earth. Empress Helen in a crown and royal robes kneels in prayer, Bishop Macarius holds the true Cross over a sick woman who sits up healed on her bed, and basil plants grow where the Cross was found."
+    },
+    "city": {
+      "caption": "Constantine builds a new capital by the sea, the city of Constantinople, and dedicates it to the Mother of God.",
+      "alt": "A huge building site on hills beside the blue sea, with cranes, scaffolding, stonemasons and carts pulled by oxen. Rising churches with domes, city walls, a column and a harbor full of ships. Constantine in purple and gold, with the Chi-Rho standard, points out where the walls should go, and seagulls fly over the water."
+    }
+  }
+}

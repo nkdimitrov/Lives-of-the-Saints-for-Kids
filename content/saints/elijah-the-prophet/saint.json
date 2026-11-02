@@ -1,0 +1,18 @@
+{
+  "slug": "elijah-the-prophet",
+  "feasts": [{ "date": "07-20", "kind": "feast" }],
+  "lived": "9th century BC",
+  "place": "The kingdom of Israel: Gilead, the brook Cherith, Zarephath, Mount Carmel, Mount Horeb and the Jordan",
+  "categories": ["prophet", "old-testament"],
+  "portrait": "portrait.svg",
+  "scenes": [
+    { "id": "ravens", "image": "scene-ravens.svg" },
+    { "id": "carmel", "image": "scene-carmel.svg" },
+    { "id": "chariot", "image": "scene-chariot.svg" }
+  ],
+  "source": {
+    "tradition": "dimitri-of-rostov",
+    "reference": "St Dimitri of Rostov, Lives of the Saints, July 20; Holy Scripture, 1 Kings 17–19 and 2 Kings 1–2",
+    "status": "draft-retelling"
+  }
+}

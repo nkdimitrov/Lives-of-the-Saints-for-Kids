@@ -1,0 +1,23 @@
+{
+  "name": "lives-of-the-saints-for-kids",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "description": "An illustrated Orthodox Christian calendar for 2027 with Lives of the Saints retold for three age groups.",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "art": "node scripts/art/build-art.mjs",
+    "art:preview": "node scripts/art/preview.mjs",
+    "check:content": "node scripts/check-content.mjs",
+    "images:generate": "node scripts/generate-images.mjs"
+  },
+  "dependencies": {
+    "astro": "^7.4.4",
+    "marked": "^18.1.2"
+  },
+  "engines": {
+    "node": ">=22.23"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "St George the Great-martyr",
+  "title": "Trophy-bearer and Wonderworker",
+  "feastLabel": "April 23 (May 3 in 2027)",
+  "summary": "A brave Roman officer who told the emperor to his face that he belonged to Christ, and the hero of the famous story of the dragon.",
+  "sourceNote": "The text for older readers follows the Life of St George in St Dimitri of Rostov's <em>Lives of the Saints</em> (April 23) and the Church's account of his miracle with the serpent, retold in our own English words. Some of the tortures are described more gently than in the original. Draft — awaiting review.",
+  "scenes": {
+    "confession": {
+      "caption": "George stands before Emperor Diocletian and says: \"I am a Christian.\"",
+      "alt": "A grand palace hall with columns and purple banners. Emperor Diocletian sits on a golden throne surrounded by nobles and guards, while young George in shining armor and a red cloak bravely holds up a small golden cross."
+    },
+    "angel": {
+      "caption": "In prison an angel comes to George in shining light and heals him.",
+      "alt": "A stone prison cell with a barred window showing the night sky. A tall angel with white wings and a golden halo touches George, who kneels in prayer, and golden light fills the dark cell while a mouse watches from a corner."
+    },
+    "dragon": {
+      "caption": "Riding a white horse, St George defeats the dragon and saves the princess.",
+      "alt": "Outside a walled city by a lake, St George on a white horse drives his spear into a green dragon. The princess in a crown watches from a rock, and the king, queen and townspeople look on from the city walls, among trees, reeds and flying birds."
+    }
+  }
+}

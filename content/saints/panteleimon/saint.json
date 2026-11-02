@@ -1,0 +1,18 @@
+{
+  "slug": "panteleimon",
+  "feasts": [{ "date": "07-27", "kind": "martyrdom" }],
+  "lived": "c. 275 – 305",
+  "place": "Nicomedia in Bithynia (today Izmit, Turkey)",
+  "categories": ["great-martyr", "unmercenary-healer"],
+  "portrait": "portrait.svg",
+  "scenes": [
+    { "id": "hermolaus", "image": "scene-hermolaus.svg" },
+    { "id": "child", "image": "scene-child.svg" },
+    { "id": "beasts", "image": "scene-beasts.svg" }
+  ],
+  "source": {
+    "tradition": "dimitri-of-rostov",
+    "reference": "St Dimitri of Rostov, Lives of the Saints, July 27",
+    "status": "draft-retelling"
+  }
+}

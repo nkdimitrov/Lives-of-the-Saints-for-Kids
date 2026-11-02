@@ -1,0 +1,21 @@
+{
+  "name": "St Basil the Great",
+  "title": "Archbishop of Caesarea in Cappadocia",
+  "feastLabel": "January 1 · January 30",
+  "summary": "A brilliant student who became a bishop, fed the hungry, built a city of mercy for the sick, and bravely defended the faith before the emperor's men.",
+  "sourceNote": "The text for older readers follows the Life of St Basil in St Dimitri of Rostov's <em>Lives of the Saints</em> (January 1), retold in our own English words. The story of the Vasilopita is a later, beloved tradition and is marked as such. Draft — awaiting review.",
+  "scenes": {
+    "athens": {
+      "caption": "In Athens, Basil and his best friend Gregory study together: they know only two roads — to church and to school.",
+      "alt": "The city of Athens with marble temples on a hill, olive trees and cypresses. Young Basil and Gregory, carrying scrolls and books, walk side by side up a stone road toward a church, while students debate under a portico and goats graze nearby."
+    },
+    "famine": {
+      "caption": "During a terrible famine, Basil cooks for the hungry and serves them with his own hands.",
+      "alt": "A courtyard in Caesarea with great steaming cooking pots over fires. Basil in his priestly robes ladles soup into the bowls of a long line of poor people, children and old men, while helpers carry baskets of bread and a new hospital with many windows stands in the background."
+    },
+    "modestus": {
+      "caption": "Basil is not afraid of the prefect Modestus: \"Perhaps you have never met a bishop before!\"",
+      "alt": "Inside a stone hall in Caesarea, the angry prefect Modestus in a rich purple cloak points and shouts, surrounded by soldiers. Bishop Basil, thin and calm, with a dark beard and a white omophorion with crosses, stands peacefully holding the Gospel."
+    }
+  }
+}

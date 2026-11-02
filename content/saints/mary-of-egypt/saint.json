@@ -1,0 +1,21 @@
+{
+  "slug": "mary-of-egypt",
+  "feasts": [
+    { "date": "04-01", "kind": "repose" },
+    { "date": "movable", "kind": "Fifth Sunday of Great Lent (April 18 in 2027)" }
+  ],
+  "lived": "c. 344 – c. 421",
+  "place": "Alexandria, Jerusalem and the desert beyond the Jordan",
+  "categories": ["monastic", "desert-mother", "repentance"],
+  "portrait": "portrait.svg",
+  "scenes": [
+    { "id": "icon", "image": "scene-icon.svg" },
+    { "id": "jordan", "image": "scene-jordan.svg" },
+    { "id": "lion", "image": "scene-lion.svg" }
+  ],
+  "source": {
+    "tradition": "dimitri-of-rostov",
+    "reference": "St Dimitri of Rostov, Lives of the Saints, April 1 (after the Life written by St Sophronius of Jerusalem)",
+    "status": "draft-retelling"
+  }
+}

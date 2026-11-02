@@ -1,0 +1,21 @@
+{
+  "name": "St Panteleimon the Healer",
+  "title": "Great-martyr and Unmercenary Physician",
+  "feastLabel": "July 27",
+  "summary": "A young doctor who learned that Christ is the true Physician, healed the sick for free, and was named \"All-merciful\" by God Himself.",
+  "sourceNote": "The text for older readers follows the Life of St Panteleimon in St Dimitri of Rostov's <em>Lives of the Saints</em> (July 27), retold in our own English words. The sufferings are told more gently than in the original. Draft — awaiting review.",
+  "scenes": {
+    "hermolaus": {
+      "caption": "On his way to medical school, young Pantoleon meets the old priest Hermolaus, who tells him about Christ, the true Physician.",
+      "alt": "A street in the city of Nicomedia with tiled houses, a fountain and a fig tree. Young Pantoleon, carrying a box of medicines and scrolls, stops at the doorway of a humble house where white-bearded Father Hermolaus invites him in, while a cat sleeps on the steps and townspeople pass by."
+    },
+    "child": {
+      "caption": "Pantoleon prays over a child bitten by a viper — the child gets up alive, and the viper bursts.",
+      "alt": "On a dusty path beside a field and an olive grove, Pantoleon kneels with his hands raised in prayer beside a little boy who is sitting up, alive and surprised, while a dead snake lies in the grass. Light shines down from heaven and a shepherd's dog watches."
+    },
+    "beasts": {
+      "caption": "In the arena, the wild beasts lie down gently at Panteleimon's feet like lambs.",
+      "alt": "A round stone arena packed with spectators. In the middle stands Panteleimon calmly blessing, while a lion, a leopard and a bear lie at his feet and lick his hands. Some spectators raise their arms and cry out, and the angry emperor watches from his box."
+    }
+  }
+}

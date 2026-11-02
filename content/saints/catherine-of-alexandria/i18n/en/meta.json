@@ -1,0 +1,21 @@
+{
+  "name": "St Catherine the Great-martyr",
+  "title": "of Alexandria, the All-wise",
+  "feastLabel": "November 25",
+  "summary": "A brilliant princess of Alexandria who found Christ, out-argued fifty philosophers, and whose cruel wheel was shattered by an angel.",
+  "sourceNote": "The text for older readers follows the Life of St Catherine in St Dimitri of Rostov's <em>Lives of the Saints</em> (November 24), retold in our own English words. Some of the sufferings are told more gently than in the original. Draft — awaiting review.",
+  "scenes": {
+    "ring": {
+      "caption": "In a vision, the Christ Child gives Catherine a ring: she will belong to Him forever.",
+      "alt": "Catherine, wearing a small crown and a rich red gown, kneels in her moonlit palace room before an icon. Above her, in a cloud of golden light, the Most Holy Theotokos in a blue and red veil holds the Christ Child, who reaches out to give Catherine a golden ring."
+    },
+    "philosophers": {
+      "caption": "Catherine answers fifty of the emperor's wisest philosophers — and they all come to believe in Christ.",
+      "alt": "A marble hall of the palace in Alexandria with scrolls, books and a library behind. Young Catherine with a halo and crown speaks with an open scroll, while bearded philosophers in colorful robes listen in amazement. The emperor frowns from his throne, and through the window can be seen the lighthouse of Alexandria and palm trees."
+    },
+    "wheel": {
+      "caption": "An angel shatters the cruel wheel, and Catherine is unharmed.",
+      "alt": "In a courtyard before the emperor's palace, a huge wooden wheel breaks apart in a flash of golden light as a mighty angel strikes it. Catherine stands calmly in prayer while the soldiers fall back in fear and a white dove flies overhead."
+    }
+  }
+}

@@ -1,0 +1,43 @@
+---
+// Round illuminated medallion: a saint portrait, or a symbol for feasts and
+// saints whose illustrated life has not been written yet.
+const { src = null, kind = 'saint', alt = '', class: cls = '' } = Astro.props;
+---
+<span class={`medallion ${cls}`}>
+  {src ? <img src={src} alt={alt} loading="lazy" decoding="async" /> : (
+    <svg viewBox="0 0 100 100" role={alt ? 'img' : undefined} aria-label={alt || undefined} aria-hidden={alt ? undefined : 'true'}>
+      {kind === 'pascha' && (<>
+        <rect width="100" height="100" fill="#a8281f" />
+        {Array.from({ length: 16 }, (_, i) => <path d={`M50 50 L${50 + 60 * Math.cos((i / 16) * 6.283 - 0.08)} ${50 + 60 * Math.sin((i / 16) * 6.283 - 0.08)} L${50 + 60 * Math.cos((i / 16) * 6.283 + 0.08)} ${50 + 60 * Math.sin((i / 16) * 6.283 + 0.08)}Z`} fill="#f0cf62" opacity=".45" />)}
+        <path d="M45 18h10v18h18v10H55v36H45V46H27V36h18z" fill="#f0cf62" stroke="#7f1d18" stroke-width="1.5" />
+      </>)}
+      {kind === 'lord' && (<>
+        <rect width="100" height="100" fill="#7f1d18" />
+        <circle cx="50" cy="50" r="34" fill="none" stroke="#f0cf62" stroke-width="2" opacity=".6" />
+        <path d="M45 20h10v18h18v10H55v32H45V48H27V38h18z" fill="#f0cf62" stroke="#3a2616" stroke-width="1.2" />
+        <path d="M33 66l34-12" stroke="#f0cf62" stroke-width="5" stroke-linecap="round" />
+      </>)}
+      {kind === 'theotokos' && (<>
+        <rect width="100" height="100" fill="#23498a" />
+        <path d="M50 22l5 17 17-5-12 13 12 13-17-5-5 17-5-17-17 5 12-13-12-13 17 5z" fill="#f0cf62" stroke="#7f1d18" stroke-width="1" />
+        <circle cx="50" cy="51" r="6" fill="#a8281f" />
+      </>)}
+      {kind === 'angel' && (<>
+        <rect width="100" height="100" fill="#9cc3e6" />
+        <path d="M50 46C38 30 18 30 14 44c8-2 16 0 22 6-6 0-10 4-10 4 10 2 18 0 24-8zM50 46c12-16 32-16 36-2-8-2-16 0-22 6 6 0 10 4 10 4-10 2-18 0-24-8z" fill="#fffaf0" stroke="#3a2616" stroke-width="1.2" />
+        <circle cx="50" cy="40" r="13" fill="#f0cf62" stroke="#c9961a" stroke-width="2" />
+        <circle cx="50" cy="42" r="8" fill="#eab88f" stroke="#3a2616" stroke-width="1.2" />
+        <path d="M40 80q10-30 20 0z" fill="#f6f1e4" stroke="#3a2616" stroke-width="1.2" />
+      </>)}
+      {kind === 'saint' && (<>
+        <rect width="100" height="100" fill="#f0cf62" />
+        <circle cx="50" cy="50" r="46" fill="none" stroke="#fbf0c8" stroke-width="2" />
+        <circle cx="50" cy="40" r="20" fill="#f7dc80" stroke="#c9961a" stroke-width="2.5" />
+        <path d="M22 100c2-26 14-36 28-36s26 10 28 36z" fill="#a8281f" stroke="#3a2616" stroke-width="1.5" />
+        <path d="M40 66l10 14 10-14" fill="none" stroke="#f0cf62" stroke-width="3" />
+        <circle cx="50" cy="44" r="12" fill="#eab88f" stroke="#3a2616" stroke-width="1.5" />
+        <path d="M45 87h10M50 82v10" stroke="#f0cf62" stroke-width="3" stroke-linecap="round" />
+      </>)}
+    </svg>
+  )}
+</span>

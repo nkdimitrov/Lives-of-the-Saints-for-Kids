@@ -1,0 +1,60 @@
+---
+import Base from '../../layouts/Base.astro';
+import Medallion from '../../components/Medallion.astro';
+import AgeTabs from '../../components/AgeTabs.astro';
+import { allSaints, formatDate } from '../../lib/calendar.js';
+import { loadSaints } from '../../lib/content.js';
+import { kindFor } from '../../lib/medallion.js';
+import { monthUrl, u } from '../../lib/url.js';
+import { t } from '../../lib/i18n.js';
+
+export function getStaticPaths() {
+  const cal = allSaints();
+  const content = loadSaints();
+  const slugs = new Set([...cal.keys(), ...content.keys()]);
+  return [...slugs].map((slug) => ({ params: { slug }, props: { cal: cal.get(slug) || null } }));
+}
+
+const { slug } = Astro.params;
+const { cal } = Astro.props;
+const saint = loadSaints().get(slug);
+const name = saint?.name || cal?.name || slug;
+const subtitle = saint?.title || cal?.subtitle || '';
+const dates = (cal?.dates || []).filter((d) => !d.transferredTo);
+const dayLink = (iso) => `${monthUrl(Number(iso.slice(5, 7)))}#${iso}`;
+---
+<Base title={name} description={saint?.summary || `${name}${subtitle ? ' — ' + subtitle : ''}. Feast days in the 2027 Orthodox calendar.`} active="saints">
+  <header class="saint-head frame">
+    <Medallion src={saint?.portraitSrc} kind={cal ? kindFor({ name: cal.dates[0]?.label || name, rank: cal.rank }) : 'saint'} alt={saint ? `Portrait of ${name}` : ''} />
+    <div>
+      <h1>{name}</h1>
+      {subtitle && <p class="title">{subtitle}</p>}
+      {dates.length > 0 && (
+        <>
+          <span class="visually-hidden">{t('saint.feasts')}:</span>
+          <ul class="feast-list">
+            {dates.map((d) => <li><a href={dayLink(d.date)} title={d.label}>{formatDate(d.date)}{d.note ? ' ★' : ''}</a></li>)}
+          </ul>
+        </>
+      )}
+      {saint?.summary && <p class="summary">{saint.summary}</p>}
+    </div>
+  </header>
+
+  {saint?.complete ? (
+    <>
+      <AgeTabs saint={saint} />
+      <aside class="source frame">
+        <h2>{t('saint.source')}</h2>
+        <p set:html={saint.sourceNote} />
+      </aside>
+    </>
+  ) : (
+    <section class="soon-panel frame">
+      <img src={u('/art/scribe.svg')} alt="A monk scribe copying the lives of the saints by lamplight" width="1200" height="800" loading="lazy" />
+      <h2>{t('saint.soonTitle')}</h2>
+      <p>{t('saint.soonText')}</p>
+      <p><a class="btn" href={dates[0] ? dayLink(dates[0].date) : monthUrl(1)}>{t('saint.backToCalendar')}</a></p>
+    </section>
+  )}
+</Base>

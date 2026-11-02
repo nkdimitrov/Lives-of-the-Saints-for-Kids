@@ -1,0 +1,21 @@
+{
+  "slug": "basil-the-great",
+  "feasts": [
+    { "date": "01-01", "kind": "repose" },
+    { "date": "01-30", "kind": "Synaxis of the Three Holy Hierarchs" }
+  ],
+  "lived": "c. 330 – 379",
+  "place": "Caesarea in Cappadocia (today Kayseri, Turkey)",
+  "categories": ["hierarch", "teacher", "three-hierarchs"],
+  "portrait": "portrait.svg",
+  "scenes": [
+    { "id": "athens", "image": "scene-athens.svg" },
+    { "id": "famine", "image": "scene-famine.svg" },
+    { "id": "modestus", "image": "scene-modestus.svg" }
+  ],
+  "source": {
+    "tradition": "dimitri-of-rostov",
+    "reference": "St Dimitri of Rostov, Lives of the Saints, January 1",
+    "status": "draft-retelling"
+  }
+}

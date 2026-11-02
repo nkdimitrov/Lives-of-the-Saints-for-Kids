@@ -1,0 +1,21 @@
+{
+  "slug": "sergius-of-radonezh",
+  "feasts": [
+    { "date": "09-25", "kind": "repose" },
+    { "date": "07-05", "kind": "finding of relics (1422)" }
+  ],
+  "lived": "c. 1314 – 1392",
+  "place": "Rostov, Radonezh and the Holy Trinity Monastery near Moscow",
+  "categories": ["monastic", "wonderworker", "abbot"],
+  "portrait": "portrait.svg",
+  "scenes": [
+    { "id": "oak", "image": "scene-oak.svg" },
+    { "id": "bear", "image": "scene-bear.svg" },
+    { "id": "blessing", "image": "scene-blessing.svg" }
+  ],
+  "source": {
+    "tradition": "dimitri-of-rostov",
+    "reference": "St Dimitri of Rostov, Lives of the Saints, September 25 (after the Life by St Epiphanius the Wise)",
+    "status": "draft-retelling"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "slug": "george",
+  "feasts": [
+    { "date": "04-23", "kind": "martyrdom (kept on Bright Monday when it falls before Pascha)" },
+    { "date": "11-03", "kind": "consecration of his church at Lydda" }
+  ],
+  "lived": "c. 275 – 303",
+  "place": "Cappadocia, Lydda in Palestine, and Nicomedia",
+  "categories": ["great-martyr", "soldier"],
+  "portrait": "portrait.svg",
+  "scenes": [
+    { "id": "confession", "image": "scene-confession.svg" },
+    { "id": "angel", "image": "scene-angel.svg" },
+    { "id": "dragon", "image": "scene-dragon.svg" }
+  ],
+  "source": {
+    "tradition": "dimitri-of-rostov",
+    "reference": "St Dimitri of Rostov, Lives of the Saints, April 23 (with the Miracle of the Serpent)",
+    "status": "draft-retelling"
+  }
+}

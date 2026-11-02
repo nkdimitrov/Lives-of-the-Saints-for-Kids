@@ -1,0 +1,22 @@
+{
+  "slug": "cyril-and-methodius",
+  "feasts": [
+    { "date": "05-11", "kind": "feast of both brothers" },
+    { "date": "02-14", "kind": "repose of St Cyril (869)" },
+    { "date": "04-06", "kind": "repose of St Methodius (885)" }
+  ],
+  "lived": "Methodius c. 815 – 885; Cyril (Constantine) 827 – 869",
+  "place": "Thessaloniki, Constantinople, Great Moravia, Pannonia and Rome",
+  "categories": ["equal-to-the-apostles", "enlighteners-of-the-slavs", "teachers"],
+  "portrait": "portrait.svg",
+  "scenes": [
+    { "id": "alphabet", "image": "scene-alphabet.svg" },
+    { "id": "moravia", "image": "scene-moravia.svg" },
+    { "id": "rome", "image": "scene-rome.svg" }
+  ],
+  "source": {
+    "tradition": "dimitri-of-rostov",
+    "reference": "St Dimitri of Rostov, Lives of the Saints, May 11 (with February 14 and April 6), after the ancient Slavonic Lives of Constantine and Methodius",
+    "status": "draft-retelling"
+  }
+}

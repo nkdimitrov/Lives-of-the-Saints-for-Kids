@@ -1,0 +1,98 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Medallion from '../../../components/Medallion.astro';
+import FastIcon from '../../../components/FastIcon.astro';
+import DayDialog from '../../../components/DayDialog.astro';
+import { YEAR, monthDays, MONTH_NAMES, WEEKDAYS, FAST_LABELS } from '../../../lib/calendar.js';
+import { loadSaints } from '../../../lib/content.js';
+import { medallionFor, principalOf } from '../../../lib/medallion.js';
+import { monthUrl, u } from '../../../lib/url.js';
+import { t } from '../../../lib/i18n.js';
+
+export function getStaticPaths() {
+  return Array.from({ length: 12 }, (_, i) => ({ params: { year: String(YEAR), month: String(i + 1).padStart(2, '0') } }));
+}
+
+const month = Number(Astro.params.month);
+const days = monthDays(month);
+const saints = loadSaints();
+const lead = days[0].weekday;
+const name = MONTH_NAMES[month - 1];
+const prev = month > 1 ? month - 1 : null;
+const next = month < 12 ? month + 1 : null;
+---
+<Base title={`${name} ${YEAR}`} description={`Orthodox calendar of saints and feasts for ${name} ${YEAR}.`} active="calendar">
+  <div class="month-banner">
+    <img src={u(`/art/months/${String(month).padStart(2, '0')}.svg`)} alt={`Illustrated ${name} landscape`} width="1600" height="500" />
+    <span class="ribbon">{name} {YEAR}</span>
+  </div>
+
+  <nav class="month-nav" aria-label="Months">
+    {prev ? <a class="btn secondary" href={monthUrl(prev)} rel="prev">← {MONTH_NAMES[prev - 1]}</a> : <span />}
+    <h1>{name} {YEAR}</h1>
+    {next ? <a class="btn secondary" href={monthUrl(next)} rel="next">{MONTH_NAMES[next - 1]} →</a> : <span />}
+  </nav>
+
+  <details class="legend frame">
+    <summary>{t('month.legend')}</summary>
+    <div class="legend-grid">
+      <div class="legend-item"><span class="legend-swatch" style="background:linear-gradient(#a8281f,#7f1d18)"></span>{t('rank.great')}</div>
+      <div class="legend-item"><span class="legend-swatch" style="background:linear-gradient(#fff6e6,#fdeccc);border-color:#d88c6c"></span>{t('rank.major')}</div>
+      {['strict', 'wine-oil', 'fish', 'dairy', 'free'].map((f) => (
+        <div class="legend-item"><FastIcon fast={f} label={FAST_LABELS[f]} /> {FAST_LABELS[f]}</div>
+      ))}
+    </div>
+    <p class="note">{t('fast.note')}</p>
+  </details>
+
+  <div class="cal" role="list">
+    {WEEKDAYS.map((w) => <div class="cal-head" aria-hidden="true">{w.slice(0, 3)}</div>)}
+    {Array.from({ length: lead }, () => <div class="cal-blank" aria-hidden="true"></div>)}
+    {days.map((day) => {
+      const p = principalOf(day, saints);
+      const m = medallionFor(p, saints);
+      const s = p.slug ? saints.get(p.slug) : null;
+      const pname = s?.complete && !p.movable ? s.name : p.name;
+      const more = day.commemorations.length - 1;
+      return (
+        <div role="listitem">
+          <button type="button" class={`day rank-${day.rank}${day.weekday === 0 ? ' sunday' : ''}`} data-day={day.date} aria-haspopup="dialog" aria-label={`${day.weekdayName}, ${name} ${day.day}: ${day.commemorations.map((c) => c.name).join('; ')}`}>
+            <span class="day-top">
+              <span class="day-num">{day.day}</span>
+              <span class="day-wd">{day.weekdayName}</span>
+            </span>
+            <Medallion src={m.src} kind={m.kind} alt="" />
+            <span class="day-name">{pname}</span>
+            {more > 0 && <span class="day-more">+{more} {t('month.more')}</span>}
+            <span class="fast-slot"><FastIcon fast={day.fast} label={day.fastLabel} /></span>
+          </button>
+        </div>
+      );
+    })}
+  </div>
+
+  {days.map((day) => <DayDialog day={day} saints={saints} />)}
+
+  <script>
+    const open = (date: string) => {
+      const dlg = document.getElementById(`d-${date}`) as HTMLDialogElement | null;
+      if (dlg && !dlg.open) dlg.showModal();
+    };
+    document.querySelectorAll<HTMLButtonElement>('[data-day]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        open(btn.dataset.day!);
+        history.replaceState(null, '', `#${btn.dataset.day}`);
+      });
+    });
+    document.querySelectorAll<HTMLDialogElement>('dialog.day-dialog').forEach((dlg) => {
+      dlg.querySelector('[data-close]')?.addEventListener('click', () => dlg.close());
+      dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+      dlg.addEventListener('close', () => history.replaceState(null, '', location.pathname));
+    });
+    const hash = decodeURIComponent(location.hash.slice(1)).replace(/^d-/, '');
+    if (/^\d{4}-\d{2}-\d{2}$/.test(hash)) open(hash);
+    const now = new Date();
+    const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+    document.querySelector(`[data-day="${today}"]`)?.classList.add('is-today');
+  </script>
+</Base>
