@@ -17,7 +17,7 @@ retold for three ages of readers.
   to discover. Every month also has its own seasonal landscape.
 
 > **Status: first draft.** Thirteen saints have full illustrated lives: Basil the Great,
-> Anthony the Great, Mary of Egypt, George, Cyril & Methodius, Constantine & Helen, Marina,
+> Anthony the Great, Conon of Isauria, Mary of Egypt, George, Cyril & Methodius, Constantine & Helen, Marina,
 > Elijah, Panteleimon, Sergius of Radonezh, Demetrios, Catherine and Nicholas. Every other saint in the
 > calendar has a "coming soon" page. The texts are our own retellings and **have not yet been
 > reviewed by clergy**. Check the daily listings against the

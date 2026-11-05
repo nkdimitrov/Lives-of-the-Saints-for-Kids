@@ -1,0 +1,18 @@
+{
+  "slug": "conon-of-isauria",
+  "feasts": [{ "date": "03-05", "kind": "repose" }],
+  "lived": "1st–2nd century",
+  "place": "Bidana, a village in the mountains of Isauria in Asia Minor (today southern Turkey)",
+  "categories": ["martyr", "wonderworker"],
+  "portrait": "portrait.svg",
+  "scenes": [
+    { "id": "archangel", "image": "scene-archangel.svg" },
+    { "id": "candle", "image": "scene-candle.svg" },
+    { "id": "rescue", "image": "scene-rescue.svg" }
+  ],
+  "source": {
+    "tradition": "dimitri-of-rostov",
+    "reference": "St Dimitri of Rostov, Lives of the Saints, March 5; the Synaxarion, March 5",
+    "status": "draft-retelling"
+  }
+}
