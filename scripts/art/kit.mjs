@@ -709,8 +709,8 @@ function riderFigure(x, y, o) {
     for (let i = 0; i < 4; i++) out += `<path d="M${x - 10},${y - 44 + i * 10} q11,6 22,0" class="l" opacity=".5"/>`;
     out += P(`M${x - 12},${y} L${x - 14},${y + 8} L${x + 14},${y + 8} L${x + 12},${y}Z`, robe);
   }
-  // halo + head
-  out += halo(x + 2, y - 72, 17);
+  // halo + head (halo: false for riders who are not saints)
+  if (o.halo !== false) out += halo(x + 2, y - 72, 17);
   out += Ci(x + 2, y - 70, 11, o.skin || C.skin);
   out += hair(x + 2, y - 70, 11, o.hair || 'curly', o.hairColor || '#4a2d18', o.beard || 'none', o.hairColor || '#4a2d18');
   out += face(x + 2, y - 70, 11, 1);

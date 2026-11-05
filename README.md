@@ -16,9 +16,9 @@ retold for three ages of readers.
   drawn for about ten-year-olds, with lots of trees, animals, villages, fortresses and palaces
   to discover. Every month also has its own seasonal landscape.
 
-> **Status: first draft.** Twelve saints have full illustrated lives: Basil the Great,
-> Anthony the Great, Mary of Egypt, George, Cyril & Methodius, Constantine & Helen, Elijah,
-> Panteleimon, Sergius of Radonezh, Demetrios, Catherine and Nicholas. Every other saint in the
+> **Status: first draft.** Thirteen saints have full illustrated lives: Basil the Great,
+> Anthony the Great, Mary of Egypt, George, Cyril & Methodius, Constantine & Helen, Marina,
+> Elijah, Panteleimon, Sergius of Radonezh, Demetrios, Catherine and Nicholas. Every other saint in the
 > calendar has a "coming soon" page. The texts are our own retellings and **have not yet been
 > reviewed by clergy**. Check the daily listings against the
 > [GOARCH calendar](https://www.goarch.org/chapel/calendar) before relying on them.
