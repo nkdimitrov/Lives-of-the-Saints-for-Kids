@@ -1,0 +1,21 @@
+{
+  "name": "St Conon of Isauria",
+  "title": "Martyr and Wonderworker, taught by the Archangel Michael",
+  "feastLabel": "March 5",
+  "summary": "A boy from the mountains of Isauria who was taught and baptized by the Archangel Michael, brought his whole family to Christ with a single candle, and was saved by his whole town when he suffered for the faith.",
+  "sourceNote": "The text for older readers follows the Life of St Conon of Isauria in St Dimitri of Rostov's <em>Lives of the Saints</em> and the Synaxarion (March 5), retold in our own English words. The old accounts differ in small details, such as the name of his village and his mother, and whether he lived in the first or the second century. His sufferings are told more gently than in the original. Not to be confused with St Conon the Gardener, a martyr of Pamphylia remembered on the same day. Draft — awaiting review.",
+  "scenes": {
+    "archangel": {
+      "caption": "In the mountains of Isauria, the Archangel Michael appears to the boy Conon, teaches him about Christ and baptizes him.",
+      "alt": "A mountain valley with a clear stream running between oaks and cypresses, goats on the rocks and a little stone village on the hillside. The Archangel Michael, in a red cloak with golden wings and a halo, stands on the bank and pours water over the head of the boy Conon, who stands in the stream in a white tunic with his hands folded in prayer. Golden rays stream down from heaven."
+    },
+    "candle": {
+      "caption": "On their wedding night Conon hides a candle under a clay pot and asks his bride Anna, “Which is better, light or darkness?”",
+      "alt": "Inside a village house at night. Conon stands by a wooden table, lifting a clay pot off a burning candle so that its warm light fills the room again, while his young bride Anna, in a red dress and a white veil, raises her hands in wonder. On the table are bread, grapes and pomegranates from the wedding feast. Through the window the stars shine over the mountains and the sleeping village, and a cat dozes on a chest."
+    },
+    "rescue": {
+      "caption": "When the governor's men beat Conon for his faith, the people of Isauria march out of their town to defend him, and the torturers run away.",
+      "alt": "Outside the gate of a walled mountain town, grey-bearded Conon with a golden halo stands praying in a circle of light, with loose ropes lying at his feet. Townspeople pour out of the gate carrying staves, spears and farm tools, while the governor gallops away on a brown horse and his soldiers run off down the road. A sick woman kneels beside the saint, goats scatter up the slope and oaks and cypresses grow on the hills."
+    }
+  }
+}
