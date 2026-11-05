@@ -1,0 +1,21 @@
+{
+  "name": "St Marina the Great-martyr",
+  "title": "of Antioch in Pisidia, Vanquisher of Demons",
+  "feastLabel": "July 17",
+  "summary": "A fifteen-year-old shepherd girl who would not trade Christ for a governor's palace, drove the devil out of her prison cell with the sign of the Cross, and was crowned by a dove from heaven.",
+  "sourceNote": "The text for older readers follows the Life of St Marina in St Dimitri of Rostov's <em>Lives of the Saints</em> (July 17) and the Greek Synaxarion, retold in our own English words. The ancient accounts differ in some details, and the sufferings are told more gently than in the original. In the West St Marina is known as St Margaret of Antioch. Draft — awaiting review.",
+  "scenes": {
+    "sheep": {
+      "caption": "Young Marina tends her nurse's sheep in the hills — and the governor Olybrius rides by.",
+      "alt": "A green hillside in the mountains of Pisidia, with a lake and the walled city of Antioch in the distance. Marina, a young girl with a golden halo, a red veil and a blue dress, holds a shepherd's staff among her flock of sheep and lambs, with her dog beside her. By a cottage with a well, her old nurse watches, while on the road the governor in a purple cloak rides up on a white horse with his soldiers."
+    },
+    "dragon": {
+      "caption": "In prison the devil comes as a dark dragon, but Marina makes the sign of the Cross and he flees. Then a shining Cross with a white dove appears.",
+      "alt": "A stone prison cell at night with a barred window. Marina stands in golden light, holding up a small cross, with a hammer in her other hand. A dark, shadowy dragon shrinks away into the corner, and above her a great Cross of light shines with a white dove resting on top. A jug of water and a loaf of bread sit on the straw, a mouse creeps up for the crumbs, and a sparrow perches on the window bars."
+    },
+    "dove": {
+      "caption": "Thrown into a great tub of water, Marina is set free by a dove carrying a golden crown — and many people come to believe in Christ.",
+      "alt": "In the main square of Antioch, Marina stands in a huge stone basin of water with her arms raised in prayer, the ropes falling from her hands. A white dove flies down from an opening in the heavens, carrying a golden crown, and a pillar of golden light shines on her. The governor frowns from his throne, while the people of the city raise their hands in wonder, among cypress trees, columns and a temple."
+    }
+  }
+}

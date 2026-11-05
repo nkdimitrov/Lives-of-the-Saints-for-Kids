@@ -1,0 +1,18 @@
+{
+  "slug": "marina",
+  "feasts": [{ "date": "07-17", "kind": "martyrdom" }],
+  "lived": "c. 289 – c. 304",
+  "place": "Antioch in Pisidia, Asia Minor (near Yalvaç, Turkey)",
+  "categories": ["great-martyr", "virgin-martyr"],
+  "portrait": "portrait.svg",
+  "scenes": [
+    { "id": "sheep", "image": "scene-sheep.svg" },
+    { "id": "dragon", "image": "scene-dragon.svg" },
+    { "id": "dove", "image": "scene-dove.svg" }
+  ],
+  "source": {
+    "tradition": "dimitri-of-rostov",
+    "reference": "St Dimitri of Rostov, Lives of the Saints, July 17",
+    "status": "draft-retelling"
+  }
+}
